@@ -60,13 +60,13 @@ A sleek and responsive Flutter app for discovering and ordering food online.
 ## 📦 Download Releases
 
 - 💻 **Windows (.7z):**  
-  [Download for Windows v1.0.0+1](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/windows-release-v1.0.0%2B1.7z)
+  [Download for Windows {{VERSION}}](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/windows-release-{{VERSION}}.7z)
 
 - 📱 **Android (.apk):**  
-  [Download for Android v1.0.0+1](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/app-release-v1.0.0%2B1.apk)
+  [Download for Android {{VERSION}}](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/app-release-{{VERSION}}.apk)
 
 - 🌐 **Web build (.7z):**  
-  [Download Web Build v1.0.0+1](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/web-release-v1.0.0%2B1.7z)
+  [Download Web Build {{VERSION}}](https://github.com/omnitechphilippines/camotes-food-express/releases/download/v1.0.0%2B1/web-release-{{VERSION}}.7z)
 
 > You can also find all versions in the [Releases Page](https://github.com/omnitechphilippines/camotes-food-express/releases)
 

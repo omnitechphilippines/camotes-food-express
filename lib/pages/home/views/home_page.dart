@@ -43,13 +43,13 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
-            SearchField(),
+            const SearchField(),
             const SizedBox(height: 40),
-            CategoriesSection(),
+            const CategoriesSection(),
             const SizedBox(height: 40),
-            DietRecommendationSection(),
+            const DietRecommendationSection(),
             const SizedBox(height: 40),
-            LayoutBuilder(builder: (_, constraints){
+            LayoutBuilder(builder: (_, BoxConstraints constraints){
               final bool isSmallScreen = constraints.maxWidth < 600;
               return Column(
                 crossAxisAlignment: isSmallScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,

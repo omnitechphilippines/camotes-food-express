@@ -8,14 +8,14 @@ class DietRecommendationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final diets = DietModel.getDiets();
+    final List<DietModel> diets = DietModel.getDiets();
 
     return LayoutBuilder(
-      builder: (_, constraints) {
-        final isSmallScreen = constraints.maxWidth < 600;
+      builder: (_, BoxConstraints constraints) {
+        final bool isSmallScreen = constraints.maxWidth < 600;
         return Column(
           crossAxisAlignment: isSmallScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const Padding(
               padding: EdgeInsets.only(left: 20),
               child: Text('Recommendation for Diet', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
@@ -29,8 +29,8 @@ class DietRecommendationSection extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 itemCount: diets.length,
                 separatorBuilder: (_, __) => const SizedBox(width: 25),
-                itemBuilder: (_, idx) {
-                  final diet = diets[idx];
+                itemBuilder: (_, int idx) {
+                  final DietModel diet = diets[idx];
                   return Container(
                     width: 210,
                     decoration: BoxDecoration(
@@ -39,10 +39,10 @@ class DietRecommendationSection extends StatelessWidget {
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
+                      children: <Widget>[
                         SvgPicture.asset(diet.iconPath),
                         Column(
-                          children: [
+                          children: <Widget>[
                             Text(diet.name, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                             Text('${diet.level} | ${diet.duration} | ${diet.calorie}', style: const TextStyle(fontSize: 13, color: Color(0xff7B6F72))),
                           ],
@@ -51,7 +51,7 @@ class DietRecommendationSection extends StatelessWidget {
                           height: 45,
                           width: 130,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
+                            gradient: LinearGradient(colors: <Color>[
                               diet.viewIsSelected ? const Color(0xff9DCEFF) : Colors.transparent,
                               diet.viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent
                             ]),

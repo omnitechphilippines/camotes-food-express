@@ -8,14 +8,14 @@ class CategoriesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final categories = CategoryModel.getCategories();
+    final List<CategoryModel> categories = CategoryModel.getCategories();
 
     return LayoutBuilder(
-      builder: (_, constraints) {
-        final isSmallScreen = constraints.maxWidth < 600;
+      builder: (_, BoxConstraints constraints) {
+        final bool isSmallScreen = constraints.maxWidth < 600;
         return Column(
           crossAxisAlignment: isSmallScreen ? CrossAxisAlignment.start : CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const Padding(
               padding: EdgeInsets.only(left: 20),
               child: Text('Category', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
@@ -29,8 +29,8 @@ class CategoriesSection extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 itemCount: categories.length,
                 separatorBuilder: (_, __) => const SizedBox(width: 25),
-                itemBuilder: (_, idx) {
-                  final cat = categories[idx];
+                itemBuilder: (_, int idx) {
+                  final CategoryModel cat = categories[idx];
                   return Container(
                     width: 100,
                     decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class CategoriesSection extends StatelessWidget {
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
+                      children: <Widget>[
                         Container(
                           width: 50,
                           height: 50,

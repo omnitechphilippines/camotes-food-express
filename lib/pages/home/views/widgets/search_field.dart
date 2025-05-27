@@ -9,7 +9,7 @@ class SearchField extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
       decoration: BoxDecoration(
-        boxShadow: [
+        boxShadow: <BoxShadow>[
           BoxShadow(
             color: const Color(0xff1D1617).withAlpha(28),
             blurRadius: 40,
@@ -32,7 +32,7 @@ class SearchField extends StatelessWidget {
             child: IntrinsicHeight(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+                children: <Widget>[
                   const VerticalDivider(color: Colors.black, thickness: 0.1, indent: 10, endIndent: 10),
                   Padding(
                     padding: const EdgeInsets.all(8),
